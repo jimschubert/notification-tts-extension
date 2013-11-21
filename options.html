@@ -1,0 +1,82 @@
+<html>
+<head>
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="options.js"></script>
+    <style>
+        .padded-row {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Notification TTS Options</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="alert alert-warning hide"></div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Display Notifications for:</div>
+        <div class="panel-body">
+            <div class="row padded-row">
+                <div class="col-md-12">
+                    <input id="delayMs" type="number" name="quantity" min="1000" max="5000" step="50"> = <span id="inSeconds"></span> second(s)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button id="btnSaveDelay" type="button" class="btn btn-sm">
+                        <span class="glyphicon glyphicon-thumbs-up"></span> Save
+                    </button>
+                </div>
+                <div class="col-md-1">
+                    <button id="btnResetDelay" type="button" class="btn btn-sm">
+                        <span class="glyphicon glyphicon-thumbs-down"></span> Use Default
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Use this icon:</div>
+        <div class="panel-body">
+            <div class="row padded-row">
+                <div class="col-md-3">
+                    <input type="file" id="iconUploader">
+                </div>
+                <div class="col-md-1">
+                    Current:
+                </div>
+                <div class="col-md-1">
+                    <canvas id="iconBefore" width="32" height="32"></canvas>
+                </div>
+                <div class="col-md-1">
+                    Updated:
+                </div>
+                <div class="col-md-1">
+                    <canvas id="iconAfter" width="32" height="32"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button id="btnSaveIcon" type="button" class="btn btn-sm">
+                        <span class="glyphicon glyphicon-thumbs-up"></span> Save
+                    </button>
+                </div>
+                <div class="col-md-1">
+                    <button id="btnResetIcon" type="button" class="btn btn-sm">
+                        <span class="glyphicon glyphicon-thumbs-down"></span> Use Default
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

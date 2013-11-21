@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.0.1",
+    "name": "Notification TTS",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "permissions": ["ttsEngine", "notifications", "storage"],
+    "options_page": "options.html",
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "tts_engine": {
+        "voices": [
+            {
+                "voice_name": "Notification",
+                "event_types": ["start", "end"]
+            }
+        ]
+    }
+}
